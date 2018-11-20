@@ -122,16 +122,28 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="80" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3v6-oe-fie">
-                                    <rect key="frame" x="10" y="0.0" width="355" height="80"/>
-                                </stackView>
+                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="1rP-Gb-Gfd">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="80" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3v6-oe-fie">
+                                            <rect key="frame" x="10" y="0.0" width="355" height="80"/>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="3v6-oe-fie" firstAttribute="top" secondItem="1rP-Gb-Gfd" secondAttribute="top" id="Jep-qw-jrj"/>
+                                        <constraint firstItem="3v6-oe-fie" firstAttribute="centerY" secondItem="1rP-Gb-Gfd" secondAttribute="centerY" id="XGX-jd-zDo"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3v6-oe-fie" secondAttribute="trailing" constant="10" id="dzj-9h-lwW"/>
+                                        <constraint firstItem="3v6-oe-fie" firstAttribute="leading" secondItem="1rP-Gb-Gfd" secondAttribute="leading" constant="10" id="iYg-0j-ApT"/>
+                                        <constraint firstAttribute="bottom" secondItem="3v6-oe-fie" secondAttribute="bottom" id="tgO-OE-v7h"/>
+                                    </constraints>
+                                </scrollView>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstItem="3v6-oe-fie" firstAttribute="top" secondItem="bzN-f0-8AD" secondAttribute="top" id="B3A-sd-gER"/>
-                                <constraint firstAttribute="bottom" secondItem="3v6-oe-fie" secondAttribute="bottom" id="HHY-Ed-bl4"/>
-                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3v6-oe-fie" secondAttribute="trailing" constant="10" id="UXk-wp-JA3"/>
-                                <constraint firstItem="3v6-oe-fie" firstAttribute="leading" secondItem="bzN-f0-8AD" secondAttribute="leading" constant="10" id="da7-x6-ZGy"/>
+                                <constraint firstItem="1rP-Gb-Gfd" firstAttribute="top" secondItem="bzN-f0-8AD" secondAttribute="top" id="2hH-JW-U9u"/>
+                                <constraint firstAttribute="bottom" secondItem="1rP-Gb-Gfd" secondAttribute="bottom" id="SKi-L3-Hep"/>
+                                <constraint firstItem="1rP-Gb-Gfd" firstAttribute="leading" secondItem="bzN-f0-8AD" secondAttribute="leading" id="a53-Tp-2z6"/>
+                                <constraint firstAttribute="trailing" secondItem="1rP-Gb-Gfd" secondAttribute="trailing" id="yDz-Hf-v8W"/>
                             </constraints>
                         </view>
                         <prototypes>
