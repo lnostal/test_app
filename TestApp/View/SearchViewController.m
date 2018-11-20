@@ -10,6 +10,7 @@
 #import "CustomCell.h"
 #import "DataManager.h"
 
+
 @interface SearchViewController ()
 
 @end
@@ -24,18 +25,14 @@
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
     [self filterContentForSearchText:searchText];
     [[self tableView] reloadData];
+    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
 }
 
-- (void)reloadSections:(NSIndexSet *)sections withRowAnimation:(UITableViewRowAnimation)animation {
-}
-
-// количество ячеек
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     return [[[DataManager shared] searchResult] count];
 }
 
-// инициализация ячеек
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *CellIdentifier = @"customCell";
