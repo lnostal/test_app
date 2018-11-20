@@ -122,7 +122,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3v6-oe-fie">
+                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="80" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3v6-oe-fie">
                                     <rect key="frame" x="10" y="0.0" width="355" height="80"/>
                                 </stackView>
                             </subviews>
@@ -130,8 +130,8 @@
                             <constraints>
                                 <constraint firstItem="3v6-oe-fie" firstAttribute="top" secondItem="bzN-f0-8AD" secondAttribute="top" id="B3A-sd-gER"/>
                                 <constraint firstAttribute="bottom" secondItem="3v6-oe-fie" secondAttribute="bottom" id="HHY-Ed-bl4"/>
+                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3v6-oe-fie" secondAttribute="trailing" constant="10" id="UXk-wp-JA3"/>
                                 <constraint firstItem="3v6-oe-fie" firstAttribute="leading" secondItem="bzN-f0-8AD" secondAttribute="leading" constant="10" id="da7-x6-ZGy"/>
-                                <constraint firstAttribute="trailing" secondItem="3v6-oe-fie" secondAttribute="trailing" constant="10" id="fMK-As-JLw"/>
                             </constraints>
                         </view>
                         <prototypes>

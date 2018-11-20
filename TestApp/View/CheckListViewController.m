@@ -84,8 +84,9 @@
     UIImageView* view = [[UIImageView alloc] initWithImage:[[UIImage alloc] initWithData:data.image]];
     view.layer.cornerRadius = cell.imageView.frame.size.height / 2;
     view.clipsToBounds = YES;
-    view.frame = [self updateWidth:66];
-    view.frame = [self updateHeight:66];
+    
+    [view.heightAnchor constraintEqualToConstant:66].active = true;
+    [view.widthAnchor constraintEqualToConstant:66].active = true;
     
     view.tag = tag;
     
