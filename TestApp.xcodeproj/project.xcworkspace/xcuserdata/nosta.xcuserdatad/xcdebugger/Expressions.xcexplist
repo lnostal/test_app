@@ -14,6 +14,9 @@
             <PersistentString
                value = "[[DataManager shared] fields]">
             </PersistentString>
+            <PersistentString
+               value = "[[DataManager shared] searchResult]">
+            </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
@@ -43,6 +46,9 @@
       </ContextState>
       <ContextState
          contextName = "-[ContactsData loadContactsFromJSON]:ContactsData.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[SearchViewController refreshTable]:SearchViewController.m">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

@@ -46,11 +46,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
     static NSString *CellIdentifier = @"customCell";
     CustomCell *cell = (CustomCell *)[self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 
-    // Configure the cell...
     if (cell == nil) {
         cell = [[CustomCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
@@ -82,8 +80,6 @@
     CustomCell* cell = [tableView cellForRowAtIndexPath:indexPath];
     NSInteger tag = cell.imageView.tag;
     
-    
-    // здесь еще констрейнты
     DataForCell* data = [[DataManager shared] findContactById:tag];
     UIImageView* view = [[UIImageView alloc] initWithImage:[[UIImage alloc] initWithData:data.image]];
     view.layer.cornerRadius = cell.imageView.frame.size.height / 2;

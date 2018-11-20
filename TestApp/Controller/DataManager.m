@@ -46,6 +46,11 @@ static DataManager *instanse = nil;
 
     self.searchResult = [[NSMutableArray alloc] init];
     
+    if (pattern == nil) {
+        [self.searchResult addObjectsFromArray:self.fields];
+        return [self searchResult];
+    }
+    
     for (int i = 0; i < self.fields.count; i++) {
         DataForCell* data = [self.fields objectAtIndex:i];
         NSString* name = data.name;

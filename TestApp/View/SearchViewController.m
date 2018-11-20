@@ -19,12 +19,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar{
+
+    [self filterContentForSearchText:nil];
+    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
+
+    return YES;
 }
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
-    [self filterContentForSearchText:searchText];
-    [[self tableView] reloadData];
+    
+    if ([self.searchBar.text isEqual:@""]) {
+        [self filterContentForSearchText:nil];
+    } else {
+        [self filterContentForSearchText:searchText];
+    }
+    
     [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
 }
 
@@ -38,7 +50,6 @@
     static NSString *CellIdentifier = @"customCell";
     CustomCell *cell = (CustomCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    // Configure the cell...
     if (cell == nil) {
         cell = [[CustomCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
