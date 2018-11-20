@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[ContactsData init]:ContactsData.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[CheckListViewController tableView:cellForRowAtIndexPath:]:CheckListViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[SearchViewController tableView:numberOfRowsInSection:]:SearchViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[[DataManager shared] fields]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "main:main.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[CheckListViewController tableView:didSelectRowAtIndexPath:]:CheckListViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[DataManager searchWith:]:DataManager.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[self searchResult]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[SearchViewController searchBar:textDidChange:]:SearchViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[[DataManager shared] searchResult]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[Contact initWithFormat:lastName:message:pathForImage:date:time:]:Contact.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[ContactsData loadContactsFromJSON]:ContactsData.m">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
